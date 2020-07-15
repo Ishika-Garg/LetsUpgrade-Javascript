@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Various Console Functions</title>
+        <h2>Console Functions</h2>
+    </head>
+    <body>
+        <p>
+        <h3>1. console.log() Function</h3>
+        This function is mainly used to log(print) the output to the console.
+        We can put any type inside the log(), be it a string, array, object, boolean etc.<br>
+        <b>For Example:</b> console.log([1,2,3,4])<br>
+        Note: Press F12 for showing the output.<br>
+        <script>console.log([1,2,3,4]);</script>
+        Output: In the browser console,the output is shown as:<br>
+        array(4)<br>
+        0:1<br>
+        1:2<br>
+        2:3<br>
+        3:4
+        <h3>2. console.error() Function</h3>
+        It is used to log error message to the console. Useful in testing of code. 
+        By default the error message will be highlighted with red color.<br>
+        <b>For Example:</b> 
+        console.error('This is a simple error')<br>
+        Note: Press F12 for showing the output.<br>
+        <script>console.error('This is a simple error');</script>
+        Output: In the browser console,the output is shown as:<br>
+        This is a simple error(in red colour)
+        <h3>3. console.warn() Function</h3>
+        It is used to log warning message to the console. Useful in testing of code. 
+        By default the error message will be highlighted with yellow color.<br>
+        <b>For Example:</b> 
+        console.warn('This is a warning message')<br>
+        Note: Press F12 for showing the output.<br>
+        <script>console.warn('This is a warning message');</script>
+        Output: In the browser console,the output is shown as:<br>
+        This is a warning message(in yellow colour)
+        <h3>4. console.clear() Function</h3>
+        It is used to clear the console. The console will be cleared, in case of Chrome a simple overlayed
+        text will be printed like : ‘Console was cleared’ while in firefox no message is returned.<br>
+        <b>For Example:</b> 
+        console.clear()<br>
+        Note: Press F12 for showing the output.<br>
+        <script>console.clear();</script>
+        Output: In the browser console,the output is shown as:<br>
+        Console was cleared
+        <h3>5. console.table() Function</h3>
+        This method allows us to generate a table inside a console. The input must be 
+        an array or an object which will be shown as a table.<br>
+        <b>For Example:</b> 
+        console.table({'a':1, 'b':2, 'c':3})<br>
+        Note: Press F12 for showing the output.<br>
+        <script>console.table({'a':1, 'b':2, 'c':3});</script>
+        Output: In the browser console,the output is shown as a table
+        <h3>6. Custom console log Function</h3>
+        It is used to add Styling to the console logs in order to make logs Custom .
+        The Syntax for it is to add the css styling as a parameter to the logs which will replace %c in logs.
+        <br><b>For Example:</b> 
+        console.log('%c A message involving javascript','color:green')<br>
+        Note: Press F12 for showing the output.<br>
+        <script>console.log('%c A message involving javascript','color:green');</script>
+        Output: In the browser console,the output is shown as:<br>
+        A message involving javascript(in green colour)
+        <h3>7. console.time() and console.timeEnd() Function</h3>
+        Whenever we want to know the amount of time spend by a block or a function,
+        we can make use of the time() and timeEnd() methods provided by the javascript console object.
+        They take a label which must be same, and the code inside can be anything( function, object etc)
+        <br><b>For Example:</b> 
+        console.time('Time taken');<br>
+        console.log([1,2,3,4]);<br>
+        console.error('This is a simple error');<br>
+        console.warn('This is a warning message');<br>
+        console.table({'a':1, 'b':2, 'c':3});<br>
+        console.timeEnd('Time taken');
+        Note: Press F12 for showing the output.<br>
+        <script>console.time('Time taken');
+            console.log([1,2,3,4]);
+            console.error('This is a simple error');
+            console.warn('This is a warning message');
+            console.table({'a':1, 'b':2, 'c':3});
+            console.timeEnd('Time taken');</script>
+        Output: In the browser console,the output is shown as:<br>
+        Time taken: 0.673095703125ms 
+        <h3>8. console.group() and console.groupEnd() Function</h3>
+        group() and groupEnd() methods of the console object allows us to group contents
+        in a separate block,which will be indented.Just like the time() and the timeEnd()
+        they also accepts label, again of same value.<br>
+        <b>For Example:</b> 
+        console.group('Group created'); 
+        console.warn('warning!'); 
+        console.error('error here'); 
+        console.log('4466'); 
+        console.groupEnd('Group created'); 
+        console.log('new section');
+        Note: Press F12 for showing the output.<br>
+        <script>console.group('Group created'); 
+            console.warn('warning!'); 
+            console.error('error here'); 
+            console.log('4466'); 
+            console.groupEnd('Group created'); 
+            console.log('new section');</script>
+        Output: In the browser console,the output is shown as a group named Group created
+       </p>
+    </body>
+</html>

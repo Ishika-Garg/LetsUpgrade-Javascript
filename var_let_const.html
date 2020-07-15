@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Variable,let and constants</title>
+        <h2>Difference between variable let and constants</h2>
+    </head>
+    <body>
+        <p>
+            <h3>1.On the basis of its scope or availability</h3>
+            <b>(I) VAR-</b> Var declarations are globally scoped which means that any variable
+            that is declared with var outside a function block is available for use in the whole window.<br>
+            <b>For example:</b>var a=20;<br>
+            console.log(a);<br>
+            <script>var a=20;
+                console.log(a);</script>
+            Note: Press F12 for showing the output.<br>
+            here in the console we get an output as 20.<br>
+            <b>(II) LET-</b> Let declarations are locally scoped which means that variable declared in
+            a block with the let is only available for use within that block.<br>
+            <b>For example:</b>let greeting = "say Hi";<br>
+            if (times > 3) {<br>
+                 let hello = "say Hello instead";<br>
+                 console.log(hello);//"say Hello instead"<br>
+             }
+            console.log(hello)<br>
+            <script>let greeting = "say Hi";
+                    let times=4;
+                    if (times > 3) {
+                     let hello = "say Hello instead";
+                     console.log(hello);//"say Hello instead"
+                     }
+                    console.log(hello)</script>
+            Output: hello is not defined<br>
+            we see that using hello outside its block(the curly braces where it was defined) returns an error.
+            This is because let variables are block scoped.<br>
+            <b>(III) CONST-</b> Similar to let, Let declarations are also locally scoped.<br>
+            <b>For example:</b>const greeting = "say Hi";<br>
+            if (times > 3) {<br>
+                 const hello = "say Hello instead";<br>
+                 console.log(hello);//"say Hello instead"<br>
+             }
+            console.log(hello)<br>
+            <script>const greeting = "say Hi";
+                    const times=4;
+                    if (times > 3) {
+                     const hello = "say Hello instead";
+                     console.log(hello);//"say Hello instead"
+                     }
+                    console.log(hello)</script>
+            Output: hello is not defined<br>
+            so it shows that it is similar output that of let.
+            <h3>2.On the basis of its updation and redeclaration property</h3>
+            <b>(I) VAR-</b> The var variables can be updated and redeclared within its scope.<br>
+            <b>For example:</b>var greeter = "hey hi";<br>
+            var greeter = "say Hello instead";<br>
+            console.log(greeter);<br>
+            <script>var greeter = "hey hi";
+                var greeter = "say Hello instead";
+                console.log(greeter);</script>
+            Output: say hello instead (Here the variable greeter is updated and redeclared)<br>
+            <b>(II) LET-</b> The var variables can be updated but not redeclared.<br>
+            <b>For example:</b>let greeting = "say Hi";<br>
+                               let greeting = "say Hello instead";<br>
+                               console.log(greeting);<br>
+                               <script>let greeting = "say Hi";
+                                       let greeting = "say Hello instead";
+                                       console.log(greeting)</script>
+                               Output: error: Identifier 'greeting' has already been declared.<br>
+            <b>(III) CONST-</b> The var variables cannot be updated or even redeclared.<br>
+            <b>For example:</b>const greeting = "say Hi";<br>
+            greeting = "say Hello instead";<br>
+            console.log(greeting);<br>
+            <script>const greeting = "say Hi";
+                    greeting = "say Hello instead";
+                    console.log(greeting);</script>
+            Output: error : Assignment to constant variable. <br>
+            Output: error : Identifier 'greeting' has already been declared.
+        </p>
+    </body>
+</html>
