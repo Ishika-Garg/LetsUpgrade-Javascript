@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings and Arrays</title>
+    <h2>Methods of Strings and Array(Remaining)</h2>
+</head>
+<body>
+    <h3>(I)Strings</h3>
+              <b>1.Substring-</b>The substring() method extracts the characters from a string, 
+                between two specified indices, and returns the new sub string.<br>
+                <b>For Example:</b>
+                let a= 'Hello everyone';<br>
+                console.log(a);<br>
+                console.log(a.substring(1,4));<br>
+                console.log(a.substring(1));<br>
+                console.log(a.substring(-3));<br>
+                console.log(a.substring(5,0));<br>
+                <script>let a= 'Hello everyone';
+                        console.log(a);
+                        console.log(a.substring(1,4));
+                        console.log(a.substring(1));
+                        console.log(a.substring(-3));
+                        console.log(a.substring(5,0));
+                </script>
+                Note: Press F12 for the output<br>
+                Output: Hello everyone<br>
+                        ell<br>
+                        ello everyone<br>
+                        Hello everyone<br>
+                        Hello<br>
+              <b>2.Substr-</b> The substr() method extracts parts of a string, beginning at the character
+                at the specified position, and returns the specified number of characters.<br>
+                <b>For Example:</b>
+                let b= 'Hello everyone';<br>
+                console.log(b);<br>
+                console.log(b.substr(1,8));<br>
+                console.log(b.substr(3));<br>
+                console.log(b.substr(-3,7));<br>
+                console.log(b.substr(4,2));<br>
+                <script>let b= 'Hello everybody';
+                                console.log(b);
+                                console.log(b.substring(1,8));
+                                console.log(b.substring(3));
+                                console.log(b.substring(-3,7));
+                                console.log(b.substr(4,2));
+                </script>
+                        Note: Press F12 for the output<br>
+                        Output: Hello everybody<br>
+                                ello ev<br>
+                                lo everybody<br>
+                                Hello e <br>
+                                o <br>
+              <b>3.Slicing-</b>The slice() method extracts parts of a string and returns the extracted
+                 parts in a new string.Use the start and end parameters to specify the part of the string
+                 that you want to extract.<br>
+                 <b>For Example:</b>
+                  let c= 'Good morning';<br>
+                  console.log(c);<br>
+                  console.log(c.slice(3,6));<br>
+                  console.log(c.slice(-3));<br>
+                  console.log(c.slice(-7,-2));<br>
+                  console.log(c.slice(4));<br>
+                <script>let c= 'Good morning';
+                                console.log(c);
+                                console.log(c.slice(3,6));
+                                console.log(c.slice(-3));
+                                console.log(c.slice(-7,-2));
+                                console.log(c.slice(4));
+                </script>
+                        Note: Press F12 for the output<br>
+                        Output: Good morning<br>
+                                d m<br>
+                                ing<br>
+                                morni<br>
+                                 morning<br>               
+              <b>4.replace-</b>The replace() method searches a string for a specified value,or a 
+                 regular expression, and returns a new string where the specified values are replaced.<br>
+                 <b>For Example:</b>
+                  let d= 'Mr Blue has Blue car and Blue house.';<br>
+                  console.log(d);<br>
+                  console.log(d.replace(/Blue/g,'Green'));<br>
+                  console.log(d.replace('car','bike'));<br>
+                  <script>let d= 'Mr Blue has Blue car and Blue house.';
+                                console.log(d);
+                                console.log(d.replace(/Blue/g,'Green'));
+                                console.log(d.replace('car','bike'));
+                  </script>
+                        Note: Press F12 for the output<br>
+                        Output:Mr Blue has Blue car and Blue house.
+                               Mr Green has Green car and Green house.
+                               Mr Blue has Blue bike and Blue house.
+    <h3>(II)Arrays</h3>
+              <b>1.splice method-</b>The splice() method adds/removes items to/from an array,
+                 and returns the removed item(s).<br>
+                 <b>For example</b>let fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+                 console.log(fruits);<br>
+                 console.log(fruits.splice(2, 1, "Lemon", "Kiwi"));<br>
+                 console.log(fruits.splice(2, 2));<br>
+                 <script>let fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    console.log(fruits);
+                    console.log(fruits.splice(2, 1, "Lemon", "Kiwi"));
+                    console.log(fruits.splice(2, 2));
+                 </script>
+                 Note: Press F12 for the output<br>
+              <b>2.to String method-</b>The toString() method returns a string with all
+                 the array values, separated by commas.<br>
+                 <b>For example</b>let num = [1,2,3,4,5];<br>
+                 console.log(num);<br>
+                 console.log(num.toString());<br>
+                 <script>let num = [1,2,3,4,5];
+                    console.log(num);
+                    console.log(num.toString());
+                 </script>
+                 Note: Press F12 for the output<br>
+               <b>3.Includes method-</b>The includes() method determines whether an array contains a specified
+                  element.This method returns true if the array contains the element, and false if not.<br>
+                 <b>For example</b>let n = [1,2,3,4];<br>
+                 console.log(n);<br>
+                 console.log(n.includes(3));<br>
+                 <script>let n = [1,2,3,4];
+                    console.log(n);
+                    console.log(num.includes(3));
+                 </script>
+                 Note: Press F12 for the output<br>         
+</body>
+</html>
