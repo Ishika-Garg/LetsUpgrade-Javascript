@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To assign grade to student</title>
+</head>
+<script>
+    let marks=prompt("Enter your marks (out of 100)");
+    console.log(marks);
+    console.log((marks>=90)?"Marks are "+marks+" and grade is A+":((marks>=80) && (marks<90))?
+                "Marks are "+marks+" and grade is A":((marks>=70) && (marks<80))?
+                "Marks are "+marks+" and grade is B+":((marks>=60) && (marks<70))?
+                "Marks are "+marks+" and grade is B":((marks>=50) && (marks<60))?
+                "Marks are "+marks+" and grade is C+":((marks>=40) && (marks<50))?
+                "Marks are "+marks+" and grade is C":((marks>=30) && (marks<40))?
+                "Marks are "+marks+" and grade is D":"Marks are "+marks+" and grade is FAIL")
+</script>
+</html>
