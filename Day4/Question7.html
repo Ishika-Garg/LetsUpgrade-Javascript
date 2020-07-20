@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To print prime numbers</title>
+</head>
+<script>
+    let num=prompt("Enter the number upto which you want prime numbers(out of 100)");
+    console.log(num);
+    function prime(num){
+        for (let i=2; i<num; i++){
+            if(num % i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+    function display(num){
+        let arr=[2];
+        for (let i=3; i<num; i+=2) {
+            if(prime(i)){
+                arr.push(i);
+            }
+        }
+        console.log(arr);
+    }
+    display(num);
+</script>
+</html>
