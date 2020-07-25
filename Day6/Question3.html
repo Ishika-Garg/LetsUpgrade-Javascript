@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display message, clock and dark mode feature</title>
+</head>
+<body>
+    <button id="dark">Switch to Dark Mode</button>
+    <h4 id="time">The time is:</h4>
+
+</body>
+<script>
+    let name = prompt("Enter your name");
+    document.write("Welcome to the page "+name)
+
+    const clocktime = document.getElementById('time');
+    function clock(){
+    let date = new Date();
+    let time = date.toLocaleTimeString();
+    clocktime.innerText = time;
+    }
+    setInterval(clock,1000);
+
+    let darkmode = document.getElementById('dark');
+    darkmode.onclick = function changeColor(){
+    document.body.style.backgroundColor='black';
+    document.body.style.color='white';
+}
+</script>
+</html>
