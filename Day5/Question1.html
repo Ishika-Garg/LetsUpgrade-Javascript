@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher order function</title>
+</head>
+<script>
+    let arr=[];
+    let num=prompt("Enter the number of arrayelements");
+    for(let i=0; i<num; i++){
+	 arr.push(+prompt("Enter the number "));
+    }
+    console.log(arr);
+    let odd = arr.filter(el=>el%2!=0);
+    let oddCubes = arr.filter(el=>el%2!=0).map(el=>el**3);
+    console.log(odd);
+    console.log(oddCubes);
+</script>
+</html>
