@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To create a stopwatch in javascript</title>
+</head>
+<body onLoad="display()">
+    <form name="stpw">
+    <font size="40px">Time: </font>
+    <input type="text" Name="time" class="show"><br/><br/>
+    <input class="button" type="button" name="ssbutton" value="Start / Stop" onClick="startstop()" class="show">
+    <input class="button" type="button" name="reset" value="Reset" onClick="swreset()">
+    </form>
+</body>
+<style>
+    .body{
+    padding:10%;
+    background-color:greenyellow;
+    }
+    .show{
+        background-color:black;
+        border:none;
+        color: white;
+        padding:5px;
+        text-align:center;
+        display: inline-block;
+        font-size:30px;
+    }
+    
+    .button{
+        background-color:pink;
+        border:none;
+        color: white;
+        margin-left:125px;
+        padding:10px 25px;
+        text-align:center;
+        display:inline-block;
+        font-size: 20px;
+    }
+</style>       
+<script>
+let ms=0;
+let state=0;
+function startstop()
+{
+    if(state==0)
+{
+    state=1;
+    then=new Date();
+    then.setTime(then.getTime()-ms);
+}
+else
+{
+    state=0;
+    now=new Date();
+    ms=now.getTime()-then.getTime();
+    document.stpw.time.value=ms;
+}
+}
+function swreset()
+{
+    state=0;
+    ms=0;
+    document.stpw.time.value=ms;
+}
+function display()
+{
+    setTimeout("display();",10);
+if(state==1)
+{
+now=new Date();
+ms=now.getTime()-then.getTime();
+document.stpw.time.value=ms;
+}
+}
+</script>
+</html>
